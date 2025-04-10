@@ -1,0 +1,391 @@
+/*Root Variables*/
+:root {
+  /*responsive font sized*/
+  --font-size-heading: clamp(2.1rem, 4vw, 3.6rem);
+  --font-size-text: clamp(0.7rem, 2.6vw, 1.4rem);
+  --font-size-cta: clamp(1rem, 2.7vw, 1.6rem);
+  --font-size-ui-heading: clamp(0.8rem, 1.2vw, 1.6rem);
+  --font-size-ui-text: clamp(0.5rem, 0.6vw, 0.9rem);
+  /*responsive gaps*/
+  --outer-gap: clamp(2rem, 4vw, 5rem);
+  --inner-gap: clamp(1rem, 2vw, 3rem);
+  --min-gap: clamp(0.5rem, 1vw, 1.6rem);
+  /*responsive paddings*/
+  --outer-padding: clamp(2.2rem, 4.4vw, 5.6rem);
+  --inner-padding: clamp(1.2rem, 2.4vw, 3.6rem);
+  --min-padding: clamp(0.7rem, 1.4vw, 2.2rem);
+  /*responsive border radiuses*/
+  --large-radius: clamp(3.6rem, 4.8vw, 7.2rem);
+  --medium-radius: clamp(1.8rem, 2.7vw, 3.6rem);
+  --small-radius: clamp(0.9rem, 1.8vw, 2.8rem);
+  /*responsive images width*/
+  --fake-images: clamp(5rem, 13vw, 15rem);
+  /*section height and width, updated with media queries*/
+  --section-width: clamp(36rem, 96dvw, 120rem);
+  --section-height: clamp(50rem, 80dvh, 130rem);
+}
+
+/*Default Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/*main*/
+main {
+  /*flex, center all the sections*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--outer-gap);
+  /*background color soft white*/
+  background-color: #eee;
+}
+
+/*reset all buttons and links*/
+button,
+a {
+  all: unset;
+  font-family: "Exo 2" sans-serif;
+}
+/*reset all inputs*/
+input {
+  all: unset;
+  border: none;
+  outline: none;
+}
+
+/*reset all images*/
+/*all images are fake*/
+img {
+  /*clean image*/
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/*reset the lists*/
+ul {
+  list-style: none;
+}
+
+/*GENERAL ELEMENTS*/
+
+/*applies to all sections*/
+.section {
+  /*size*/
+  height: var(--section-height);
+  max-width: var(--section-width);
+}
+/*applies to all nav elements*/
+.nav {
+  /*size*/
+  min-width: 100%;
+}
+
+/*Default image container*/
+.img-container {
+  /*size*/
+  width: var(--fake-images);
+  height: auto;
+  /*fit the image*/
+  overflow: hidden;
+  /*border*/
+  border-radius: var(--small-radius);
+}
+
+/*SPECIFIC SECTIONS*/
+
+/*Hero Section Elements*/
+
+/*applies to hero section only*/
+.section-hero {
+  /*flex, col, center all items*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--outer-gap);
+  /*size - full screen*/
+  /*background color dark emerald*/
+  background-color: #012d21;
+  /*high bottom border radius*/
+  border-radius: var(--large-radius);
+}
+
+/*applies only to hero nav element*/
+.nav-hero {
+  /*Horizontal flex*/
+  display: flex;
+  justify-content: space-between;
+  /*padding*/
+  padding: var(--outer-padding); /*10px on small devices*/
+  /*font*/
+  color: #eee;
+}
+
+/*hero navigation list*/
+.list__hero-nav {
+  /*flex row*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--inner-gap);
+}
+
+/*hero navigation buttons container*/
+.hero__nav_buttons-container {
+  /*flex row*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--min-gap);
+}
+
+/*Hero Section Body*/
+.hero__body {
+  /*display*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--inner-gap);
+  /*size*/
+  height: 50%;
+  width: 100%;
+  /*font*/
+  color: #eee;
+}
+
+/*Left div container*/
+.hero__body-left {
+  /*display*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--outer-gap);
+  /*size*/
+  width: 60%;
+  height: 80%;
+  /*padding*/
+  padding: var(--inner-padding);
+}
+
+/*Left div child elements*/
+.hero__body-left h1 {
+  font-family: "Roboto" sans-serif;
+  font-size: var(--font-size-heading);
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+  line-height: 1.2;
+  text-align: left;
+  color: #fff;
+}
+
+.hero__body-left p {
+  font-size: var(--font-size-text);
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+}
+
+.hero__body-left button {
+  /*text*/
+  font-size: var(--font-size-cta);
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  /*element*/
+  background-color: #00e500;
+  padding: var(--min-padding);
+  border-radius: var(--small-radius);
+}
+
+/*Right div container*/
+.hero__body-right {
+  /*display*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inner-gap);
+  /*size*/
+  width: 40%;
+  height: 80%;
+}
+
+/*Right div child elements*/
+.hero__body-right ul {
+  /*display*/
+  display: flex;
+  flex-direction: column; /*for smaller screens*/
+  gap: var(--inner-gap);
+  /*padding*/
+  padding: var(--inner-padding);
+}
+
+.hero__body-right li {
+  /*p + img container*/
+  /*display*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--min-gap);
+  /*padding*/
+  padding: var(--min-padding);
+  /*background*/
+  background-color: #ccc;
+  /*border*/
+  border-radius: var(--small-radius);
+}
+
+/*specifically the images inside the right > ul > li > p*/
+.hero__body-right ul > li > p {
+  font-size: var(--font-size-text);
+  text-align: center;
+  font-weight: 600;
+  color: #222;
+}
+
+/*hero section verification form -- hero-right*/
+.hero__body-right form {
+  /*display*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*padding*/
+  padding: var(--inner-padding);
+  /*fix padding left*/
+  padding-left: 0;
+  /*margin right*/
+  margin-right: 2rem;
+  /*background*/
+  background-color: #bbb;
+  /*border*/
+  border-radius: var(--medium-radius);
+}
+
+.hero__check-form--logo {
+  /*display: img container + heading*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--min-gap);
+}
+
+.hero__check-form--logo h6 {
+  /*typography*/
+  font-size: var(--font-size-ui-heading);
+  text-align: center;
+  font-weight: 600;
+  color: #444;
+}
+
+.checkbox-container {
+  /*display*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--min-gap);
+  padding: var(--min-padding);
+}
+
+.checkbox-container p {
+  /*typography*/
+  /*even though this is a text, heading font size fits better */
+  font-size: var(--font-size-ui-heading);
+  text-align: center;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Custom checkmark */
+.checkmark {
+  /*size*/
+  width: 4rem;
+  height: auto;
+  aspect-ratio: 1;
+  /*border*/
+  border-radius: var(--small-radius);
+  /*background*/
+  background-color: #eee;
+}
+
+/*hero divider: top nav + content + (divider) + bottom nav*/
+.hero__divider {
+  /*size*/
+  width: 100%;
+  /*center the header*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__divider h5 {
+  /*typography*/
+  font-family: "Roboto" sans-serif;
+  font-size: var(--font-size-heading);
+  text-align: center;
+  letter-spacing: 0.1rem;
+  color: #ccc;
+}
+
+/*Hero bottom navigation*/
+.list__hero-bottom {
+  /*flex row*/
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  gap: var(--inner-gap);
+  /*padding*/
+  padding: var(--inner-padding);
+  /*margin bottom*/
+  margin-bottom: 1rem;
+}
+
+.list__hero-bottom > li {
+  /*display: img-container + h6*/
+  display: flex;
+  flex-direction: column; /*smaller screens*/
+  justify-content: center;
+  align-items: center;
+  gap: var(--min-gap);
+}
+
+.list__hero-bottom > li > h6 {
+  /*typography*/
+  font-family: "Roboto" sans-serif;
+  font-size: var(--font-size-ui-text);
+  color: #eee;
+}
+
+/*Media Queries*/
+@media (min-width: 768px) {
+  /*Hero Section*/
+  /*enlarge images*/
+  /*enlarge hero right list elements*/
+  /*adjust checkbox*/
+  /*enlarge navigations (top and bottom)*/
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}

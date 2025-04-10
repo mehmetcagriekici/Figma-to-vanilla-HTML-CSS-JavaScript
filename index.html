@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+    <title>Home Page</title>
+  </head>
+  <body>
+    <main>
+      <!--Hero, dark theme-->
+      <section class="section section-hero">
+        <!--hero top navigation-->
+        <nav class="nav nav-hero">
+          <!--logo-->
+          <div class="img-container">
+            <img src="https://picsum.photos/400/600" alt="private-logo" />
+          </div>
+          <!--list links-->
+          <ul class="list list__hero-nav">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+          <!--join buttons container-->
+          <div class="hero__nav_buttons-container">
+            <button>login</button>
+            <button>signup</button>
+          </div>
+        </nav>
+        <!--hero main flexbox-->
+        <div class="hero__body">
+          <!--Introduction + cta-->
+          <div class="hero__body-left">
+            <h1>The privacy fist captcha just that just works</h1>
+            <p>
+              Perfect for your forms and APIs from abuse with user friendly,
+              GDPR-compliant security that integrates seamlessly with your
+              existing tech stack.
+            </p>
+            <button>start free trial</button>
+          </div>
+          <!--hero buttons-->
+          <div class="hero__body-right">
+            <!--feature buttons list-->
+            <ul class="list">
+              <li>
+                <div class="img-container img-container_hero--right">
+                  <img
+                    src="https://picsum.photos/400/600"
+                    alt="GDPR-compliant"
+                  />
+                </div>
+                <p>GDPR compliant</p>
+              </li>
+              <li>
+                <div class="img-container img-container_hero--right">
+                  <img
+                    src="https://picsum.photos/400/600"
+                    alt="Privacy-first"
+                  />
+                </div>
+                <p>Privacy-first</p>
+              </li>
+              <li>
+                <div class="img-container">
+                  <img
+                    src="https://picsum.photos/400/600"
+                    alt="User-friendly"
+                  />
+                </div>
+                <p>User-friendly</p>
+              </li>
+            </ul>
+            <!--verify form-->
+            <form>
+              <!--radio-->
+              <label for="verify" class="checkbox-container">
+                <input type="checkbox" id="verify" name="verify" />
+                <span class="checkmark"></span>
+                <p>Click to verify</p>
+              </label>
+              <!--logo-->
+              <div class="hero__check-form--logo">
+                <div class="img-container">
+                  <img src="https://picsum.photos/400/600" lt="logo" />
+                </div>
+                <h6>Private Captcha</h6>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--Br with header, all capital-->
+        <div class="hero__divider">
+          <h5>world-leading organizations trust us</h5>
+        </div>
+
+        <!--bottom display list-->
+        <ul class="list list__hero-bottom">
+          <li>
+            <div class="img-container">
+              <img src="https://picsum.photos/400/600" alt="veolia" />
+            </div>
+            <h6>veolia</h6>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="https://picsum.photos/400/600" alt="brikenstock" />
+            </div>
+            <h6>brikenstock</h6>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="https://picsum.photos/400/600" alt="ionos" />
+            </div>
+            <h6>ionos</h6>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="https://picsum.photos/400/600" alt="auth0" />
+            </div>
+            <h6>auth0</h6>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="https://picsum.photos/400/600" alt="red_cross" />
+            </div>
+            <h6>red cross</h6>
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="https://picsum.photos/400/600" alt="zalando" />
+            </div>
+            <h6>zalando</h6>
+          </li>
+        </ul>
+      </section>
+      <!--How it works-->
+      <section>
+        <!--section header-->
+        <h1>How Private Captcha Works</h1>
+        <!--map grid-->
+        <div>
+          <!--images container - overlapping cards-->
+          <div></div>
+          <!--connection arrow-->
+          <div></div>
+          <!--Form-->
+          <form>
+            <!--radio input-->
+            <input />
+            <label>Click to verify</label>
+            <!--logo-->
+            <div>
+              <div class="img-container">
+                <img alt="logo" />
+              </div>
+              <h6>Private Captcha</h6>
+            </div>
+          </form>
+          <!--information text-->
+          <div>
+            <p>
+              Private Captcha sovles an invisible cryptographic task in the
+              background adjusting difficulty to ensure easy access or real
+              users while making it costyl for bots
+            </p>
+          </div>
+        </div>
+        <!--Showcase 2 lists-->
+        <div>
+          <!--user list-->
+          <ul>
+            <!--list header, all capital-->
+            <div>
+              <h5>user</h5>
+            </div>
+            <li>
+              <img alt="simple-action" />
+              <label>
+                <img alt="user-logo" />
+                <span>Simple Action</span>
+              </label>
+            </li>
+            <li>
+              <img alt="fast-access" />
+              <label>
+                <img alt="user-logo" />
+                <span>Fast Access</span>
+              </label>
+            </li>
+            <li>
+              <img alt="no-tracking" />
+              <label>
+                <img alt="user-logo" />
+                <span>No Tracking</span>
+              </label>
+            </li>
+          </ul>
+          <!--Bots List-->
+          <ul>
+            <!--list header, all capital-->
+            <div>
+              <h5>bots</h5>
+            </div>
+            <li>
+              <img alt="exorbiant-cost-of-solving-captcha" />
+              <label>
+                <img alt="bots-logo" />
+                <span>Exorbiant Cost of Solving Captcha</span>
+              </label>
+            </li>
+            <li>
+              <img alt="unaffected-by-ai-intelligence" />
+              <label>
+                <img alt="bots-logo" />
+                <span>Unaffected by ai Intelligence</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--legal-->
+      <section>
+        <!--legal list-->
+        <ul>
+          <li>
+            <img alt="GDPR/CCPA-ready" />
+            <h6>GDPR/CCPA ready</h6>
+            <p>No personal data processing. DPA ready</p>
+          </li>
+          <li>
+            <img alt="eu-only-suppliers" />
+            <h6>EU-only suppliers</h6>
+            <p>ALL infrastructure and suppliers are based in the EU.</p>
+          </li>
+          <li>
+            <img alt="open-source" />
+            <h6>Open source</h6>
+            <p>Our code is publicly available for audit.</p>
+          </li>
+          <li>
+            <img alt="no-end-user-tracking" />
+            <h6>No end-user tracking</h6>
+            <p>We do not collect behavioral or personal data.</p>
+          </li>
+          <li>
+            <img alt="No cookies" />
+            <h6>No cookies</h6>
+            <p>
+              We do not use cookies so there's no need for intrusive pop-ups.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!--Features-->
+      <section>
+        <!--Features list-->
+        <ul>
+          <li>
+            <img alt="lightweight" />
+            <h6>Lightweight</h6>
+            <p>Our script is 7% size of Google reCAPTCHA</p>
+          </li>
+          <li>
+            <img alt="accessibility-improvements" />
+            <h6>Accessibility Improvements</h6>
+            <p>Multiple languages customizable design</p>
+          </li>
+          <li>
+            <img alt="no-solving-visual-puzzles" />
+            <h6>No Solving Visual Puzzles</h6>
+            <p>Does not depend on cognitive abilities of the user</p>
+          </li>
+          <li>
+            <img alt="no-personal-data-trackign" />
+            <h6>No Personal Data Tracking</h6>
+            <p>Privacy Policy is simple - no personal data is collected</p>
+          </li>
+        </ul>
+      </section>
+      <!--Pricing-->
+      <section>
+        <!--Pricing header-->
+        <h3>Simple pricing</h3>
+        <!--toggle button form-->
+        <form>
+          <fieldset>
+            <label>
+              <input />
+              <span>Monthly</span>
+            </label>
+
+            <label>
+              <input />
+              <span>Yearly <span>one month free</span></span>
+            </label>
+          </fieldset>
+        </form>
+        <!--options grid-->
+        <div>
+          <!--card one, pricing intro-->
+          <div>
+            <!--card header-->
+            <h3>€5 / month <span>billed per year</span></h3>
+            <!--request information-->
+            <div>
+              <!--left arrow -->
+              <button>&larr;</button>
+              <!--information-->
+              <h5>5,000 <span>requests</span></h5>
+              <!--right arrow-->
+              <button>&rarr;</button>
+            </div>
+            <!--billing sell out-->
+            <ul>
+              <li>
+                <img alt="logo-filled" />
+                <p>Privacy-first protection</p>
+              </li>
+              <li>
+                <img alt="logo-filled" />
+                <p>Easy integration</p>
+              </li>
+              <li>
+                <img alt="logo-filled" />
+                <p>No cookie banners required</p>
+              </li>
+              <li>
+                <img alt="logo-filled" />
+                <p>User friendly</p>
+              </li>
+            </ul>
+            <!--join button and message-->
+            <div>
+              <button>Start free trial</button>
+              <p>cancel any time</p>
+            </div>
+            <!--extra information, absolute positioning - outside the card, right below it-->
+            <p>Price does not include VAT</p>
+          </div>
+          <!--card two, pricing details-->
+          <div>
+            <!--heading-->
+            <div>
+              <h4>Included in each plan</h4>
+            </div>
+            <!--list-->
+            <ul>
+              <li>
+                <img alt="logo-outlined" />
+                <p>Smart difficulty scaling</p>
+              </li>
+              <li>
+                <img alt="logo-outlined" />
+                <p>EU-only endpoints</p>
+              </li>
+              <li>
+                <img alt="logo-outlined" />
+                <p>Real human support</p>
+              </li>
+              <li>
+                <img alt="logo-outlined" />
+                <p>Up to 50 properties</p>
+              </li>
+              <li>
+                <img alt="logo-outlined" />
+                <p>Usage statistics</p>
+              </li>
+              <li>
+                <img alt="logo-outlined" />
+                <p>Widget customization</p>
+              </li>
+              <li>
+                <img alt="logo-outlined" />
+                <p>Invisible challenge</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Final messages-->
+        <div>
+          <h5>Depoloy your own infrastructure for free</h5>
+          <a>Check documentation</a>
+        </div>
+      </section>
+      <!--FAQ-->
+      <section>
+        <!--Header-->
+        <h3>Frequently Asked Questions</h3>
+        <!--Accordion list-->
+        <ul>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>What is the price of Private Captcha?</h6>
+
+            <!--details, hidden first-->
+            <p>
+              Private Captcha offers a couple of usage-based pricing tiers,
+              based on a number of requests per month , starting wşth $5 for
+              1,000 requests. Each plan comes with access to all features,
+              including automated difficulty scaling, usage statistics,
+              organizations, customer support or more.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>Can I try Private Captcha before buying?</h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>
+              Is there an additional charge for traffic spikes (tier limit
+              violation)?
+            </h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>How easy is to migrate from other providers?</h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>
+              How Private Captcha is different frpö other Proof-Work solutions?
+            </h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>How to add Private Captcha on my website?</h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          4
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>
+              How does Private Captcha comply with data protection regulations
+              like GDPR?
+            </h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>
+              Can we use Private Captcha if our complience requires strict
+              EU-only data sovereignty?
+            </h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+          <li>
+            <!--header visible, on open bolder-->
+            <h6>Can I customize how Private Captcha widget looks like?</h6>
+
+            <!--details, hidden first-->
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+              dolore quas eius eum fuga, fugiat ipsum eveniet at officia odio
+              voluptatem tenetur velit beatae, ducimus aspernatur quaerat quasi
+              aut. Ratione.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!--How to use-->
+      <section>
+        <!--Header and remark-->
+        <div>
+          <h3>Easy to use</h3>
+          <p>Features Of Private Captcha</p>
+        </div>
+        <!--features grid-->
+        <div>
+          <!--feature element-->
+          <div>
+            <!--logo + header + explanation-->
+            <div>
+              <img alt="easy-integrations" />
+              <h5>Easy Integrations</h5>
+              <p>Work with popular platforms and frameworks</p>
+            </div>
+            <!--Optional extras-->
+            <div>
+              <img alt="frame-work-logos" />
+            </div>
+          </div>
+          <!--feature element-->
+          <div>
+            <!--logo + header + explanation-->
+            <div>
+              <img alt="extensive-documentation-for-developers" />
+              <h5>Extensive Documentation For Developers</h5>
+              <p>
+                No more extensvive onboarding, contracts, passwords or assets.
+                Revoke access to your website & assets instantly.
+              </p>
+            </div>
+          </div>
+          <!--feature element-->
+          <div>
+            <!--logo + header + explanation-->
+            <div>
+              <img alt="insert-the-code" />
+              <h5>Insert The Code</h5>
+              <p>Easy-to-implement setup</p>
+            </div>
+            <!--Optional extras-->
+            <div>
+              <img alt="code-canvas-image" />
+            </div>
+          </div>
+          <!--feature element-->
+          <div>
+            <!--logo + header + explanation-->
+            <div>
+              <img alt="real-human-supprt" />
+              <h5>Real Human Support</h5>
+              <p>See live updates and monitor campaign results and KPI's.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Comparison-->
+      <section>
+        <!--comparison header-->
+        <h3>Compare with others</h3>
+        <!--comparison table-->
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Google reCaptcha</th>
+              <th>Private Captcha</th>
+              <th>Friendly Captcha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>User Friendly</td>
+              <td><img alt="src-negative-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+            </tr>
+            <tr>
+              <td>GDPR-compliant</td>
+              <td>Grey area (at best)</td>
+              <td><img alt="src-positive-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+            </tr>
+            <tr>
+              <td>Open-source</td>
+              <td><img alt="src-negative-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+              <td>Only widget</td>
+            </tr>
+            <tr>
+              <td>Difficulty Scaling</td>
+              <td><img alt="src-negative-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+              <td>Enterprise tier only</td>
+            </tr>
+            <tr>
+              <td>EU-only endpoints</td>
+              <td><img alt="src-negative-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+              <td>Enterprise tier only</td>
+            </tr>
+            <tr>
+              <td>Real Human Support</td>
+              <td><img alt="src-negative-outline-icon" /></td>
+              <td><img alt="src-positive-outline-icon" /></td>
+              <td>Enterprise tier only</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!--Join - Dark Theme-->
+      <section>
+        <!--header-->
+        <h1>Protect your forms and APIs from abuse</h1>
+        <!--message-->
+        <p>Privacy first CAPTCHA with no tracking or cookies</p>
+        <!--buttons-->
+        <div>
+          <button>Log in</button>
+          <button>Start free trial</button>
+        </div>
+      </section>
+    </main>
+    <!--footer-->
+    <footer>
+      <!--information-->
+      <div>
+        <!--logo-->
+        <div>
+          <img alt="private-logo" />
+        </div>
+        <!--links table-->
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Quick Links</th>
+              <th>Legal Links</th>
+              <th>Alternative to</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a>Documentation</a></td>
+              <td><a>Terms And Conditions</a></td>
+              <td><a>Google reCAPTCHA</a></td>
+            </tr>
+            <tr>
+              <td><a>Pricing</a></td>
+              <td><a>End User Privacy Policy</a></td>
+              <td><a>hCAPTCHA</a></td>
+            </tr>
+            <tr>
+              <td><a>FAQ</a></td>
+              <td><a>Service Privacy Policy</a></td>
+              <td><a>Friendly Captcha</a></td>
+            </tr>
+            <tr>
+              <td><a>Github</a></td>
+              <td><a>DPA</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--divider-->
+      <br />
+      <!--copyright-->
+      <div>
+        <p>Copyright &copy; 2025 Private Captcha. All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
