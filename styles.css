@@ -1,28 +1,28 @@
 /*Root Variables*/
 :root {
   /*responsive font sized*/
-  --font-size-heading: clamp(2.1rem, 4vw, 3.6rem);
-  --font-size-text: clamp(0.7rem, 2.6vw, 1.4rem);
-  --font-size-cta: clamp(1rem, 2.7vw, 1.6rem);
-  --font-size-ui-heading: clamp(0.8rem, 1.2vw, 1.6rem);
-  --font-size-ui-text: clamp(0.5rem, 0.6vw, 0.9rem);
+  --font-size-heading: clamp(2.4rem, 3vw, 4.4rem);
+  --font-size-text: clamp(1.2rem, 1.4vw, 1.8rem);
+  --font-size-cta: clamp(1.4rem, 2vw, 2.2rem);
+  --font-size-ui-heading: clamp(1.2rem, 1.2vw, 2rem);
+  --font-size-ui-text: clamp(1rem, 1vw, 1.6rem);
   /*responsive gaps*/
-  --outer-gap: clamp(2rem, 4vw, 5rem);
-  --inner-gap: clamp(1rem, 2vw, 3rem);
-  --min-gap: clamp(0.5rem, 1vw, 1.6rem);
+  --outer-gap: clamp(2.4rem, 5vw, 6rem);
+  --inner-gap: clamp(1.2rem, 2vw, 3rem);
+  --min-gap: clamp(0.6rem, 0.8vw, 1.2rem);
   /*responsive paddings*/
-  --outer-padding: clamp(2.2rem, 4.4vw, 5.6rem);
-  --inner-padding: clamp(1.2rem, 2.4vw, 3.6rem);
-  --min-padding: clamp(0.7rem, 1.4vw, 2.2rem);
+  --outer-padding: clamp(2rem, 5vw, 6rem);
+  --inner-padding: clamp(1.2rem, 2vw, 3rem);
+  --min-padding: clamp(0.6rem, 1vw, 1.6rem);
   /*responsive border radiuses*/
-  --large-radius: clamp(3.6rem, 4.8vw, 7.2rem);
-  --medium-radius: clamp(1.8rem, 2.7vw, 3.6rem);
-  --small-radius: clamp(0.9rem, 1.8vw, 2.8rem);
+  --large-radius: clamp(2.4rem, 6vw, 6rem);
+  --medium-radius: clamp(1.2rem, 2vw, 2.8rem);
+  --small-radius: clamp(0.6rem, 1vw, 1.6rem);
   /*responsive images width*/
-  --fake-images: clamp(5rem, 13vw, 15rem);
-  /*section height and width, updated with media queries*/
-  --section-width: clamp(36rem, 96dvw, 120rem);
-  --section-height: clamp(50rem, 80dvh, 130rem);
+  --fake-images: clamp(6rem, 10vw, 12rem);
+  /*section height and width*/
+  --section-width: clamp(36rem, 90vw, 112rem);
+  --section-height: clamp(60rem, 90dvh, 110rem);
 }
 
 /*Default Reset*/
@@ -59,6 +59,7 @@ a {
   all: unset;
   font-family: "Exo 2" sans-serif;
 }
+
 /*reset all inputs*/
 input {
   all: unset;
@@ -72,7 +73,7 @@ img {
   /*clean image*/
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 5/3;
   object-fit: cover;
 }
 
@@ -86,13 +87,30 @@ ul {
 /*applies to all sections*/
 .section {
   /*size*/
-  height: var(--section-height);
+  min-height: var(--section-height);
   max-width: var(--section-width);
 }
+
+.section-wrapper {
+  /*make it a controlled continer*/
+  max-width: 120rem;
+  width: 100%;
+}
+
 /*applies to all nav elements*/
 .nav {
-  /*size*/
-  min-width: 100%;
+  /*make it a controlled continer*/
+  max-width: 120rem;
+  width: 100%;
+  /*Horizontal flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--inner-gap);
+  /*font*/
+  color: #eee;
+  /*padding*/
+  padding: var(--outer-padding);
 }
 
 /*Default image container*/
@@ -109,7 +127,6 @@ ul {
 /*SPECIFIC SECTIONS*/
 
 /*Hero Section Elements*/
-
 /*applies to hero section only*/
 .section-hero {
   /*flex, col, center all items*/
@@ -118,22 +135,10 @@ ul {
   align-items: center;
   justify-content: center;
   gap: var(--outer-gap);
-  /*size - full screen*/
   /*background color dark emerald*/
   background-color: #012d21;
   /*high bottom border radius*/
   border-radius: var(--large-radius);
-}
-
-/*applies only to hero nav element*/
-.nav-hero {
-  /*Horizontal flex*/
-  display: flex;
-  justify-content: space-between;
-  /*padding*/
-  padding: var(--outer-padding); /*10px on small devices*/
-  /*font*/
-  color: #eee;
 }
 
 /*hero navigation list*/
@@ -143,6 +148,16 @@ ul {
   justify-content: center;
   align-items: center;
   gap: var(--inner-gap);
+}
+
+/*nav list cta*/
+.list__hero-nav a,
+.list__hero-nav button {
+  font-size: var(--font-size-ui-text);
+}
+
+.list__hero-nav button {
+  text-decoration: underline;
 }
 
 /*hero navigation buttons container*/
@@ -156,35 +171,36 @@ ul {
 
 /*Hero Section Body*/
 .hero__body {
+  /*make it a controlled continer*/
+  max-width: 120rem;
+  width: 100%;
   /*display*/
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: var(--inner-gap);
-  /*size*/
-  height: 50%;
-  width: 100%;
   /*font*/
   color: #eee;
 }
 
 /*Left div container*/
 .hero__body-left {
+  /*normalize the height*/
+  height: auto;
+  align-self: stretch;
   /*display*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--outer-gap);
-  /*size*/
-  width: 60%;
-  height: 80%;
   /*padding*/
   padding: var(--inner-padding);
 }
 
 /*Left div child elements*/
 .hero__body-left h1 {
+  /*typography*/
   font-family: "Roboto" sans-serif;
   font-size: var(--font-size-heading);
   font-weight: 400;
@@ -195,6 +211,7 @@ ul {
 }
 
 .hero__body-left p {
+  /*typography*/
   font-size: var(--font-size-text);
   font-weight: 300;
   letter-spacing: 0.1rem;
@@ -217,15 +234,15 @@ ul {
 
 /*Right div container*/
 .hero__body-right {
+  /*normalize the height*/
+  height: auto;
+  align-self: stretch;
   /*display*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--inner-gap);
-  /*size*/
-  width: 40%;
-  height: 80%;
 }
 
 /*Right div child elements*/
@@ -263,6 +280,9 @@ ul {
 
 /*hero section verification form -- hero-right*/
 .hero__body-right form {
+  /*constrain the form*/
+  width: 100%;
+  max-width: 100%;
   /*display*/
   display: flex;
   justify-content: center;
@@ -272,7 +292,7 @@ ul {
   /*fix padding left*/
   padding-left: 0;
   /*margin right*/
-  margin-right: 2rem;
+  margin-right: 1rem;
   /*background*/
   background-color: #bbb;
   /*border*/
@@ -328,8 +348,6 @@ ul {
 
 /*hero divider: top nav + content + (divider) + bottom nav*/
 .hero__divider {
-  /*size*/
-  width: 100%;
   /*center the header*/
   display: flex;
   justify-content: center;
@@ -347,16 +365,17 @@ ul {
 
 /*Hero bottom navigation*/
 .list__hero-bottom {
+  /*make it a controlled continer*/
+  max-width: 120rem;
+  width: 100%;
   /*flex row*/
   display: flex;
   justify-content: center;
-  flex-shrink: 1;
   flex-wrap: wrap;
+  flex-shrink: 1;
   gap: var(--inner-gap);
   /*padding*/
   padding: var(--inner-padding);
-  /*margin bottom*/
-  margin-bottom: 1rem;
 }
 
 .list__hero-bottom > li {
@@ -378,10 +397,14 @@ ul {
 /*Media Queries*/
 @media (min-width: 768px) {
   /*Hero Section*/
-  /*enlarge images*/
-  /*enlarge hero right list elements*/
-  /*adjust checkbox*/
-  /*enlarge navigations (top and bottom)*/
+  /*bottom list element flex direction*/
+  .list__hero-bottom > li {
+    flex-direction: row;
+  }
+  /*checkmark size*/
+  .checkmark {
+    width: 6rem;
+  }
 }
 
 @media (min-width: 1024px) {
