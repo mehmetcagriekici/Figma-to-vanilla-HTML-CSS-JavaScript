@@ -82,6 +82,19 @@ ul {
   list-style: none;
 }
 
+/*test classes*/
+.test-border-red {
+  border: 2px dashed red;
+}
+
+.test-border-blue {
+  border: 2px dashed blue;
+}
+
+.test-border-green {
+  border: 2px dashed green;
+}
+
 /*GENERAL ELEMENTS*/
 
 /*applies to all sections*/
@@ -89,6 +102,12 @@ ul {
   /*size*/
   min-height: var(--section-height);
   max-width: var(--section-width);
+  /*flex, col, center all items*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--outer-gap);
 }
 
 .section-wrapper {
@@ -129,12 +148,6 @@ ul {
 /*Hero Section Elements*/
 /*applies to hero section only*/
 .section-hero {
-  /*flex, col, center all items*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--outer-gap);
   /*background color dark emerald*/
   background-color: #012d21;
   /*high bottom border radius*/
@@ -150,7 +163,7 @@ ul {
   gap: var(--inner-gap);
 }
 
-/*nav list cta*/
+/*cta*/
 .list__hero-nav a,
 .list__hero-nav button {
   font-size: var(--font-size-ui-text);
@@ -169,8 +182,9 @@ ul {
   gap: var(--min-gap);
 }
 
-/*Hero Section Body*/
-.hero__body {
+/*Layouts*/
+.hero__body,
+.how_it_works-upper {
   /*make it a controlled continer*/
   max-width: 120rem;
   width: 100%;
@@ -183,8 +197,16 @@ ul {
   color: #eee;
 }
 
-/*Left div container*/
-.hero__body-left {
+/*update the how it looks uppper layout*/
+.how_it_works-upper {
+  flex-direction: column;
+  /*background color is white, update the font color*/
+  color: #222;
+}
+
+/*Inner Containers*/
+.hero__body-left,
+.how_it_works-upper--left {
   /*normalize the height*/
   height: auto;
   align-self: stretch;
@@ -198,8 +220,14 @@ ul {
   padding: var(--inner-padding);
 }
 
-/*Left div child elements*/
-.hero__body-left h1 {
+/*update the how_it_works-upper--left*/
+.how_it_works-upper--left {
+  flex-direction: row;
+}
+
+/*Headers*/
+.hero__body-left h3,
+.how_it_works-header h3 {
   /*typography*/
   font-family: "Roboto" sans-serif;
   font-size: var(--font-size-heading);
@@ -208,6 +236,12 @@ ul {
   line-height: 1.2;
   text-align: left;
   color: #fff;
+}
+
+/*update the color of how_it_works-header*/
+.how_it_works-header h3 {
+  color: #000;
+  text-align: center;
 }
 
 .hero__body-left p {
@@ -232,8 +266,9 @@ ul {
   border-radius: var(--small-radius);
 }
 
-/*Right div container*/
-.hero__body-right {
+/*containers*/
+.hero__body-right,
+.how_it_works-upper--right {
   /*normalize the height*/
   height: auto;
   align-self: stretch;
@@ -245,7 +280,7 @@ ul {
   gap: var(--inner-gap);
 }
 
-/*Right div child elements*/
+/*lists under the containers*/
 .hero__body-right ul {
   /*display*/
   display: flex;
@@ -270,16 +305,18 @@ ul {
   border-radius: var(--small-radius);
 }
 
-/*specifically the images inside the right > ul > li > p*/
-.hero__body-right ul > li > p {
+/*list element texts*/
+.hero__body-right ul > li > p,
+.how_it_works-list--elements > li > p {
   font-size: var(--font-size-text);
   text-align: center;
   font-weight: 600;
   color: #222;
 }
 
-/*hero section verification form -- hero-right*/
-.hero__body-right form {
+/*verify form, checkbox*/
+.hero__body-right form,
+.how_it_works-upper--right form {
   /*constrain the form*/
   width: 100%;
   max-width: 100%;
@@ -299,7 +336,7 @@ ul {
   border-radius: var(--medium-radius);
 }
 
-.hero__check-form--logo {
+.check-form--logo {
   /*display: img container + heading*/
   display: flex;
   flex-direction: column;
@@ -308,7 +345,7 @@ ul {
   gap: var(--min-gap);
 }
 
-.hero__check-form--logo h6 {
+.check-form--logo h6 {
   /*typography*/
   font-size: var(--font-size-ui-heading);
   text-align: center;
@@ -344,6 +381,10 @@ ul {
   border-radius: var(--small-radius);
   /*background*/
   background-color: #eee;
+}
+
+.checkmark-dark {
+  background: #ccc;
 }
 
 /*hero divider: top nav + content + (divider) + bottom nav*/
@@ -394,6 +435,99 @@ ul {
   color: #eee;
 }
 
+/*section how it works*/
+.how_it_works-upper {
+  color: #222;
+}
+
+.how_it_works-list-container ul {
+  /*display , contains two list*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inner-gap);
+  padding: var(--inner-padding);
+}
+
+.how_it_works-list--header h5,
+.legal-list--header h5 {
+  font-family: "Roboto" sans-serif;
+  font-size: var(--font-size-ui-heading);
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.06rem;
+  text-align: center;
+}
+
+.how_it_works-list--elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--inner-gap);
+}
+
+.how_it_works-list--elements li {
+  /*element behavior*/
+  flex-grow: 1;
+  /*display:*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--inner-gap);
+  /*padding*/
+  padding: var(--min-padding);
+  /*border*/
+  border-radius: 1rem;
+  /*shadow*/
+  box-shadow: 0 0.1rem 0.3rem 0 #000;
+}
+
+.how_it_works-upper--right form {
+  background-color: transparent;
+}
+
+.how_it_works-upper--right p {
+  font-size: var(--font-size-text);
+  text-align: center;
+  color: #222;
+  letter-spacing: 0.08rem;
+}
+
+/*section legal*/
+.list-legal {
+  /*display*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--outer-gap);
+  /*padding*/
+  padding: var(--outer-padding);
+  /*background color*/
+  background-color: #ccc;
+}
+
+.list-legal li {
+  flex-grow: 1;
+  /*display*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.legal-list--header {
+  /*100% width*/
+  flex: 1 0 100%;
+}
+
+/*update header font size*/
+.legal-list--header h5 {
+  font-size: var(--font-size-heading);
+}
+
 /*Media Queries*/
 @media (min-width: 768px) {
   /*Hero Section*/
@@ -411,4 +545,7 @@ ul {
 }
 
 @media (min-width: 1280px) {
+  .checkmark {
+    width: 8rem;
+  }
 }
