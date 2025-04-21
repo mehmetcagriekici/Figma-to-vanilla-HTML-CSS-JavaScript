@@ -23,6 +23,12 @@
   /*section height and width*/
   --section-width: clamp(36rem, 90vw, 112rem);
   --section-height: clamp(60rem, 90dvh, 110rem);
+  /*shadows, from TailwindCSS documentation*/
+  --shadow-sm: 0 1px 3px 0 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 /*Default Reset*/
@@ -307,7 +313,9 @@ ul {
 
 /*list element texts*/
 .hero__body-right ul > li > p,
-.how_it_works-list--elements > li > p {
+.how_it_works-list--elements > li > p,
+.list-legal li > p,
+.list-features li > p {
   font-size: var(--font-size-text);
   text-align: center;
   font-weight: 600;
@@ -428,7 +436,9 @@ ul {
   gap: var(--min-gap);
 }
 
-.list__hero-bottom > li > h6 {
+.list__hero-bottom > li > h6,
+.list-legal li > h6,
+.list-features li > h6 {
   /*typography*/
   font-family: "Roboto" sans-serif;
   font-size: var(--font-size-ui-text);
@@ -451,7 +461,9 @@ ul {
 }
 
 .how_it_works-list--header h5,
-.legal-list--header h5 {
+.legal-list--header h5,
+.features-list--header h5,
+.prices-list--header h5 {
   font-family: "Roboto" sans-serif;
   font-size: var(--font-size-ui-heading);
   font-weight: 600;
@@ -481,7 +493,7 @@ ul {
   /*border*/
   border-radius: 1rem;
   /*shadow*/
-  box-shadow: 0 0.1rem 0.3rem 0 #000;
+  box-shadow: var(--shadow-md);
 }
 
 .how_it_works-upper--right form {
@@ -496,7 +508,8 @@ ul {
 }
 
 /*section legal*/
-.list-legal {
+.list-legal,
+.list-features {
   /*display*/
   display: flex;
   flex-wrap: wrap;
@@ -505,8 +518,12 @@ ul {
   gap: var(--outer-gap);
   /*padding*/
   padding: var(--outer-padding);
+  /*border radius*/
+  border-radius: var(--large-radius);
   /*background color*/
-  background-color: #ccc;
+  background-color: #ddd;
+  /*shadow*/
+  box-shadow: var(--shadow-lg);
 }
 
 .list-legal li {
@@ -518,14 +535,93 @@ ul {
   align-items: center;
 }
 
-.legal-list--header {
+.list-legal li > h6 {
+  /*update the color*/
+  color: #222;
+}
+
+.list-legal li > p {
+  /*update the color*/
+  color: #444;
+}
+
+.legal-list--header,
+.features-list--header {
   /*100% width*/
   flex: 1 0 100%;
 }
 
 /*update header font size*/
-.legal-list--header h5 {
+.legal-list--header h5,
+.features-list--header h5,
+.prices-list--header h5 {
   font-size: var(--font-size-heading);
+}
+
+/*section features*/
+.list-features {
+  /*update the bg*/
+  background-color: transparent;
+  /*remove shadow*/
+  box-shadow: none;
+}
+
+.list-features li {
+  flex: 1 0 100%;
+  /*display*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--min-gap);
+  /*background*/
+  background-color: #ddd;
+  /*border*/
+  border-radius: var(--medium-radius);
+  /*shadow*/
+  box-shadow: var(--shadow-md);
+  /*padding*/
+  padding: var(--min-padding);
+}
+
+.list-features li > h6 {
+  /*update the typography*/
+  color: #333;
+  letter-spacing: 0.05rem;
+}
+
+/*pricing section*/
+
+/*toggle button*/
+/*toggle button container*/
+.pricing-toggle-container {
+  /*flex layout, one child*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*padding*/
+  padding: var(--inner-padding);
+}
+/*label*/
+.pricing-toggle {
+  /*to hide the input element, so it stays in this label*/
+  position: relative;
+  /*display*/
+  display: inline-flex;
+  align-items: center;
+  gap: var(--inner-gap);
+  /*cursor*/
+  cursor: pointer;
+}
+/*hide the real input*/
+.pricing-toggle input[type="checkbox"] {
+  /*position at the start*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*hide it*/
+  height: 0;
+  width: 0;
 }
 
 /*Media Queries*/

@@ -325,134 +325,218 @@
         </div>
       </section>
       <!--Features-->
-      <section>
+      <section class="section">
         <!--Features list-->
-        <ul>
-          <li>
-            <img alt="lightweight" />
-            <h6>Lightweight</h6>
-            <p>Our script is 7% size of Google reCAPTCHA</p>
-          </li>
-          <li>
-            <img alt="accessibility-improvements" />
-            <h6>Accessibility Improvements</h6>
-            <p>Multiple languages customizable design</p>
-          </li>
-          <li>
-            <img alt="no-solving-visual-puzzles" />
-            <h6>No Solving Visual Puzzles</h6>
-            <p>Does not depend on cognitive abilities of the user</p>
-          </li>
-          <li>
-            <img alt="no-personal-data-trackign" />
-            <h6>No Personal Data Tracking</h6>
-            <p>Privacy Policy is simple - no personal data is collected</p>
-          </li>
-        </ul>
+        <div class="section-wrapper">
+          <ul class="list-features">
+            <div class="features-list--header">
+              <h5>User Friendly Experience</h5>
+            </div>
+            <li>
+              <div class="img-container">
+                <img src="https://picsum.photos/400/600" alt="lightweight" />
+              </div>
+              <h6>Lightweight</h6>
+              <p>Our script is 7% size of Google reCAPTCHA</p>
+            </li>
+            <li>
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="accessibility-improvements"
+                />
+              </div>
+              <h6>Accessibility Improvements</h6>
+              <p>Multiple languages customizable design</p>
+            </li>
+            <li>
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="no-solving-visual-puzzles"
+                />
+              </div>
+              <h6>No Solving Visual Puzzles</h6>
+              <p>Does not depend on cognitive abilities of the user</p>
+            </li>
+            <li>
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="no-personal-data-trackign"
+                />
+              </div>
+              <h6>No Personal Data Tracking</h6>
+              <p>Privacy Policy is simple - no personal data is collected</p>
+            </li>
+          </ul>
+        </div>
       </section>
       <!--Pricing-->
-      <section>
-        <!--Pricing header-->
-        <h3>Simple pricing</h3>
-        <!--toggle button form-->
-        <form>
-          <fieldset>
-            <label>
-              <input />
-              <span>Monthly</span>
-            </label>
-
-            <label>
-              <input />
-              <span>Yearly <span>one month free</span></span>
-            </label>
-          </fieldset>
-        </form>
-        <!--options grid-->
-        <div>
-          <!--card one, pricing intro-->
-          <div>
-            <!--card header-->
-            <h3>€5 / month <span>billed per year</span></h3>
-            <!--request information-->
-            <div>
-              <!--left arrow -->
-              <button>&larr;</button>
-              <!--information-->
-              <h5>5,000 <span>requests</span></h5>
-              <!--right arrow-->
-              <button>&rarr;</button>
-            </div>
-            <!--billing sell out-->
-            <ul>
-              <li>
-                <img alt="logo-filled" />
-                <p>Privacy-first protection</p>
-              </li>
-              <li>
-                <img alt="logo-filled" />
-                <p>Easy integration</p>
-              </li>
-              <li>
-                <img alt="logo-filled" />
-                <p>No cookie banners required</p>
-              </li>
-              <li>
-                <img alt="logo-filled" />
-                <p>User friendly</p>
-              </li>
-            </ul>
-            <!--join button and message-->
-            <div>
-              <button>Start free trial</button>
-              <p>cancel any time</p>
-            </div>
-            <!--extra information, absolute positioning - outside the card, right below it-->
-            <p>Price does not include VAT</p>
+      <section class="section">
+        <div class="section-wrapper">
+          <!--Pricing header-->
+          <div class="prices-list--header">
+            <h5>Simple pricing</h5>
           </div>
-          <!--card two, pricing details-->
-          <div>
-            <!--heading-->
-            <div>
-              <h4>Included in each plan</h4>
-            </div>
-            <!--list-->
-            <ul>
-              <li>
-                <img alt="logo-outlined" />
-                <p>Smart difficulty scaling</p>
-              </li>
-              <li>
-                <img alt="logo-outlined" />
-                <p>EU-only endpoints</p>
-              </li>
-              <li>
-                <img alt="logo-outlined" />
-                <p>Real human support</p>
-              </li>
-              <li>
-                <img alt="logo-outlined" />
-                <p>Up to 50 properties</p>
-              </li>
-              <li>
-                <img alt="logo-outlined" />
-                <p>Usage statistics</p>
-              </li>
-              <li>
-                <img alt="logo-outlined" />
-                <p>Widget customization</p>
-              </li>
-              <li>
-                <img alt="logo-outlined" />
-                <p>Invisible challenge</p>
-              </li>
-            </ul>
+          <!--toggle button container-->
+          <div class="pricing-toggle-container">
+            <!--Button-->
+            <label for="pricing-toggle" class="pricing-toggle">
+              <!--Two States: Checked or unchecked, real input invisible-->
+              <input type="checkbox" id="pricing-toggle" />
+              <!--Show toggle track, visible fake button-->
+              <span class="toggle-track"></span>
+              <!--Texts-->
+              <span class="toggle-labels">
+                <span class="toggle-labels--monthly">Monthly</span>
+                <span class="toggle-labels--yearly"
+                  >Yearly <span>one month free</span></span
+                >
+              </span>
+            </label>
           </div>
-        </div>
-        <!--Final messages-->
-        <div>
-          <h5>Depoloy your own infrastructure for free</h5>
-          <a>Check documentation</a>
+          <!--options grid-->
+          <div>
+            <!--card one, pricing intro-->
+            <div>
+              <!--card header-->
+              <h6>€5 / month <span>billed per year</span></h6>
+              <!--request information-->
+              <div>
+                <!--left arrow -->
+                <button>&larr;</button>
+                <!--information-->
+                <p>5,000 <span>requests</span></p>
+                <!--right arrow-->
+                <button>&rarr;</button>
+              </div>
+              <!--billing sell out-->
+              <ul>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-filled"
+                    />
+                  </div>
+                  <p>Privacy-first protection</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-filled"
+                    />
+                  </div>
+                  <p>Easy integration</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-filled"
+                    />
+                  </div>
+                  <p>No cookie banners required</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-filled"
+                    />
+                  </div>
+                  <p>User friendly</p>
+                </li>
+              </ul>
+              <!--join button and message-->
+              <div>
+                <button>Start free trial</button>
+                <p>cancel any time</p>
+              </div>
+              <!--extra information, absolute positioning - outside the card, right below it-->
+              <p>Price does not include VAT</p>
+            </div>
+            <!--card two, pricing details-->
+            <div>
+              <!--heading-->
+              <div>
+                <h6>Included in each plan</h6>
+              </div>
+              <!--list-->
+              <ul>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>Smart difficulty scaling</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>EU-only endpoints</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>Real human support</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>Up to 50 properties</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>Usage statistics</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>Widget customization</p>
+                </li>
+                <li>
+                  <div class="img-container">
+                    <img
+                      src="https://picsum.photos/400/600"
+                      alt="logo-outlined"
+                    />
+                  </div>
+                  <p>Invisible challenge</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Final messages-->
+          <div>
+            <p>Depoloy your own infrastructure for free</p>
+            <a>Check documentation</a>
+          </div>
         </div>
       </section>
       <!--FAQ-->
