@@ -389,6 +389,7 @@
               <span class="toggle-track"></span>
               <!--Texts-->
               <span class="toggle-labels">
+                <!--Enhance with JS and then Style it again-->
                 <span class="toggle-labels--monthly">Monthly</span>
                 <span class="toggle-labels--yearly"
                   >Yearly <span>one month free</span></span
@@ -669,57 +670,63 @@
         </ul>
       </section>
       <!--How to use-->
-      <section>
-        <!--Header and remark-->
-        <div>
-          <h3>Easy to use</h3>
-          <p>Features Of Private Captcha</p>
-        </div>
-        <!--features grid-->
-        <div>
-          <!--feature element-->
-          <div>
-            <!--logo + header + explanation-->
-            <div>
-              <img alt="easy-integrations" />
+      <section class="section">
+        <div class="section-wrapper">
+          <!--Header and remark-->
+          <div class="how-to-use-header">
+            <h3>Easy to use</h3>
+            <p>Features Of Private Captcha</p>
+          </div>
+          <!--features grid-->
+          <div class="how-to-use-grid">
+            <!--feature element-->
+            <div class="how-to-use-card">
+              <!--logo + header + explanation-->
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="easy-integrations"
+                />
+              </div>
               <h5>Easy Integrations</h5>
               <p>Work with popular platforms and frameworks</p>
             </div>
-            <!--Optional extras-->
-            <div>
-              <img alt="frame-work-logos" />
-            </div>
-          </div>
-          <!--feature element-->
-          <div>
-            <!--logo + header + explanation-->
-            <div>
-              <img alt="extensive-documentation-for-developers" />
+            <!--feature element-->
+            <div class="how-to-use-card">
+              <!--logo + header + explanation-->
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="extensive-documentation-for-developers"
+                />
+              </div>
               <h5>Extensive Documentation For Developers</h5>
               <p>
                 No more extensvive onboarding, contracts, passwords or assets.
                 Revoke access to your website & assets instantly.
               </p>
             </div>
-          </div>
-          <!--feature element-->
-          <div>
-            <!--logo + header + explanation-->
-            <div>
-              <img alt="insert-the-code" />
+            <!--feature element-->
+            <div class="how-to-use-card">
+              <!--logo + header + explanation-->
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="insert-the-code"
+                />
+              </div>
               <h5>Insert The Code</h5>
               <p>Easy-to-implement setup</p>
             </div>
-            <!--Optional extras-->
-            <div>
-              <img alt="code-canvas-image" />
-            </div>
-          </div>
-          <!--feature element-->
-          <div>
-            <!--logo + header + explanation-->
-            <div>
-              <img alt="real-human-supprt" />
+            <!--feature element-->
+            <div class="how-to-use-card">
+              <!--logo + header + explanation-->
+              <div class="img-container">
+                <img
+                  src="https://picsum.photos/400/600"
+                  alt="real-human-supprt"
+                />
+              </div>
               <h5>Real Human Support</h5>
               <p>See live updates and monitor campaign results and KPI's.</p>
             </div>
@@ -727,69 +734,79 @@
         </div>
       </section>
       <!--Comparison-->
-      <section>
-        <!--comparison header-->
-        <h3>Compare with others</h3>
-        <!--comparison table-->
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Google reCaptcha</th>
-              <th>Private Captcha</th>
-              <th>Friendly Captcha</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>User Friendly</td>
-              <td><img alt="src-negative-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-            </tr>
-            <tr>
-              <td>GDPR-compliant</td>
-              <td>Grey area (at best)</td>
-              <td><img alt="src-positive-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-            </tr>
-            <tr>
-              <td>Open-source</td>
-              <td><img alt="src-negative-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-              <td>Only widget</td>
-            </tr>
-            <tr>
-              <td>Difficulty Scaling</td>
-              <td><img alt="src-negative-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-              <td>Enterprise tier only</td>
-            </tr>
-            <tr>
-              <td>EU-only endpoints</td>
-              <td><img alt="src-negative-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-              <td>Enterprise tier only</td>
-            </tr>
-            <tr>
-              <td>Real Human Support</td>
-              <td><img alt="src-negative-outline-icon" /></td>
-              <td><img alt="src-positive-outline-icon" /></td>
-              <td>Enterprise tier only</td>
-            </tr>
-          </tbody>
-        </table>
+      <section class="section section-comparison">
+        <div class="section-wrapper">
+          <!--comparison header-->
+          <div class="comparison-header">
+            <h3>Compare with others</h3>
+          </div>
+          <!--comparison table-->
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Google reCaptcha</th>
+                <th>Private Captcha</th>
+                <th>Friendly Captcha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>User Friendly</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>GDPR-compliant</td>
+                <td><span class="text-muted">Grey area (at best)</span></td>
+                <td>✅</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Open-source</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td><span class="text-muted">Only widget</span></td>
+              </tr>
+              <tr>
+                <td>Difficulty Scaling</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td><span class="text-muted">Enterprise only</span></td>
+              </tr>
+              <tr>
+                <td>EU-only endpoints</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td><span class="text-muted">Enterprise only</span></td>
+              </tr>
+              <tr>
+                <td>Real Human Support</td>
+                <td>❌</td>
+                <td>✅</td>
+                <td><span class="text-muted">Enterprise only</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
-      <!--Join - Dark Theme-->
-      <section>
-        <!--header-->
-        <h3>Protect your forms and APIs from abuse</h3>
-        <!--message-->
-        <p>Privacy first CAPTCHA with no tracking or cookies</p>
-        <!--buttons-->
-        <div>
-          <button>Log in</button>
-          <button>Start free trial</button>
+      <!--Join-->
+      <section class="section section-join">
+        <div class="section-wrapper">
+          <!--header-->
+          <div class="join-header">
+            <h3>Protect your forms and APIs from abuse</h3>
+          </div>
+          <!--message-->
+          <div class="join-p">
+            <p>Privacy first CAPTCHA with no tracking or cookies</p>
+          </div>
+          <!--buttons-->
+          <div class="join-buttons">
+            <button class="btn-outline">Log in</button>
+            <button class="btn-filled">Start free trial</button>
+          </div>
         </div>
       </section>
     </main>
