@@ -88,19 +88,6 @@ ul {
   list-style: none;
 }
 
-/*test classes*/
-.test-border-red {
-  border: 2px dashed red;
-}
-
-.test-border-blue {
-  border: 2px dashed blue;
-}
-
-.test-border-green {
-  border: 2px dashed green;
-}
-
 /*GENERAL ELEMENTS*/
 
 /*applies to all sections*/
@@ -129,13 +116,13 @@ ul {
   width: 100%;
   /*Horizontal flex*/
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: var(--inner-gap);
   /*font*/
   color: #eee;
   /*padding*/
-  padding: var(--outer-padding);
+  padding: calc(var(--outer-padding) * 1.2);
 }
 
 /*Default image container*/
@@ -196,6 +183,7 @@ ul {
   width: 100%;
   /*display*/
   display: flex;
+  flex-direction: column; /*mobile*/
   justify-content: center;
   align-items: stretch;
   gap: var(--inner-gap);
@@ -205,7 +193,8 @@ ul {
 
 /*update the how it looks uppper layout*/
 .how_it_works-upper {
-  flex-direction: column;
+  align-items: center;
+  gap: var(--inner-gap);
   /*background color is white, update the font color*/
   color: #222;
 }
@@ -223,12 +212,13 @@ ul {
   align-items: center;
   gap: var(--outer-gap);
   /*padding*/
-  padding: var(--inner-padding);
+  padding: calc(var(--outer-padding) * 0.8);
 }
 
 /*update the how_it_works-upper--left*/
 .how_it_works-upper--left {
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /*Headers*/
@@ -240,9 +230,9 @@ ul {
   /*typography*/
   font-family: "Roboto" sans-serif;
   font-size: var(--font-size-heading);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.08rem;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: left;
   color: #fff;
 }
@@ -275,9 +265,9 @@ ul {
 .hero__body-left p {
   /*typography*/
   font-size: var(--font-size-text);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .hero__body-left button {
@@ -292,6 +282,16 @@ ul {
   background-color: #00e500;
   padding: var(--min-padding);
   border-radius: var(--small-radius);
+  /*transition*/
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/**hover, focus*/
+.hero__body-left button:hover,
+.hero__body-left button:focus {
+  background-color: #00cc00;
+  transform: scale(1.03);
 }
 
 /*containers*/
@@ -306,6 +306,11 @@ ul {
   align-items: center;
   justify-content: center;
   gap: var(--inner-gap);
+}
+
+/*update how_it_works-uuper--right perpedacular axis layout*/
+.how_it_works-upper--right {
+  align-items: stretch;
 }
 
 /*lists under the containers*/
@@ -340,7 +345,8 @@ ul {
 .list-features li > p,
 .how-to-use-header p,
 .how-to-use-card p,
-.join-p p {
+.join-p p,
+.pricing-join p {
   font-size: var(--font-size-text);
   text-align: center;
   font-weight: 600;
@@ -363,11 +369,16 @@ ul {
   padding-bottom: var(--outer-padding);
 }
 
+/*update pricing join p*/
+.pricing-join p {
+  font-size: var(--font-size-ui-heading);
+  color: #012d21;
+}
+
 /*verify form, checkbox*/
 .hero__body-right form,
 .how_it_works-upper--right form {
   /*constrain the form*/
-  width: 100%;
   max-width: 100%;
   /*display*/
   display: flex;
@@ -377,8 +388,6 @@ ul {
   padding: var(--inner-padding);
   /*fix padding left*/
   padding-left: 0;
-  /*margin right*/
-  margin-right: 1rem;
   /*background*/
   background-color: #bbb;
   /*border*/
@@ -403,12 +412,22 @@ ul {
 }
 
 .checkbox-container {
+  /*width*/
+  width: 100%;
   /*display*/
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--min-gap);
+  /*padding*/
   padding: var(--min-padding);
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
 }
 
 .checkbox-container p {
@@ -422,14 +441,32 @@ ul {
 
 /* Custom checkmark */
 .checkmark {
+  position: relative;
+  display: inline-block;
   /*size*/
-  width: 4rem;
-  height: auto;
+  width: 2.4rem;
+  height: 2.4rem;
   aspect-ratio: 1;
   /*border*/
   border-radius: var(--small-radius);
   /*background*/
   background-color: #eee;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+  background-color: #00e500;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 0.7rem;
+  top: 0.3rem;
+  width: 0.6rem;
+  height: 1.2rem;
+  border: solid #fff;
+  border-width: 0 0.3rem 0.3rem 0;
+  transform: rotate(45deg);
 }
 
 .checkmark-dark {
@@ -479,11 +516,24 @@ ul {
 
 .list__hero-bottom > li > h6,
 .list-legal li > h6,
-.list-features li > h6 {
+.list-features li > h6,
+.pricing-card h6 {
   /*typography*/
   font-family: "Roboto" sans-serif;
   font-size: var(--font-size-ui-text);
   color: #eee;
+}
+
+/*update pricing card h6*/
+.pricing-card h6 {
+  font-size: var(--font-size-heading);
+  color: #222;
+}
+
+.pricing-card h6 span {
+  font-size: var(--font-size-ui-text);
+  display: block;
+  color: #666;
 }
 
 /*section how it works*/
@@ -492,6 +542,8 @@ ul {
 }
 
 .how_it_works-list-container ul {
+  /*contain the size*/
+  max-width: 100%;
   /*display , contains two list*/
   display: flex;
   flex-direction: column;
@@ -556,7 +608,8 @@ ul {
 
 /*section legal*/
 .list-legal,
-.list-features {
+.list-features,
+.list-pricing {
   /*display*/
   display: flex;
   flex-wrap: wrap;
@@ -573,6 +626,12 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+/*update list pricing*/
+.list-pricing {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .list-legal li {
   flex-grow: 1;
   /*display*/
@@ -580,6 +639,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: var(--min-gap);
 }
 
 .list-legal li > h6 {
@@ -590,6 +650,8 @@ ul {
 .list-legal li > p {
   /*update the color*/
   color: #444;
+  font-size: var(--font-size-ui-text);
+  line-height: 1.4;
 }
 
 .legal-list--header,
@@ -638,6 +700,75 @@ ul {
 }
 
 /*pricing section*/
+.pricing-cards-container {
+  /*display->grid, 2 cards*/
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--outer-gap);
+  /*padding*/
+  padding: var(--inner-padding);
+}
+
+.pricing-card {
+  /*display*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--inner-gap);
+  /*border*/
+  border-radius: var(--medium-radius);
+  box-shadow: var(--shadow-md);
+  /*padding*/
+  padding: var(--inner-padding);
+  /*background*/
+  background-color: #fff;
+}
+
+.pricing-card.secondary {
+  background-color: #f4f4f4;
+  box-shadow: none;
+}
+
+.pricing-card-request {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--min-gap);
+}
+
+.pricing-card-request button {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #012d21;
+  cursor: pointer;
+}
+
+.pricing-join {
+  /*layout*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inner-gap);
+}
+
+.pricing-join p {
+  font-size: var(--font-size-ui-text);
+  color: #999;
+}
+
+.list-pricing li {
+  flex: 1;
+  font-size: var(--font-size-text);
+  color: #444;
+}
+
+.vat-note {
+  /*typohraphy*/
+  font-size: var(--font-size-ui-text);
+  color: #aaa;
+  text-align: center;
+  font-style: italic;
+}
 
 /*toggle button*/
 /*toggle button container*/
@@ -731,6 +862,57 @@ ul {
   /*typography*/
   font-size: var(--font-size-ui-text);
   color: #888;
+}
+
+/*FAQ Section*/
+/* FAQ base styles */
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: var(--min-padding) 0;
+}
+
+.faq-question {
+  /*fix width*/
+  width: 100%;
+  /*typography*/
+  text-align: left;
+  font-size: var(--font-size-ui-heading);
+  font-weight: 600;
+  color: #222;
+  /*padding*/
+  padding: var(--min-padding) 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/*arrow*/
+.faq-question::after {
+  content: "▼";
+  float: right;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question::after {
+  transform: rotate(180deg); /* point up */
+}
+
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  opacity: 1;
+}
+
+.faq-answer p {
+  padding: var(--inner-padding);
+  font-size: var(--font-size-ui-text);
+  line-height: 1.6;
+  color: #333;
 }
 
 /*How to use section*/
@@ -847,9 +1029,20 @@ ul {
   background-color: #00cc00;
 }
 
+.btn-filled:focus,
+.btn-outline:focus {
+  outline: 2px solid #00e500;
+  outline-offset: 2px;
+}
+
 /*Media Queries*/
 @media (min-width: 768px) {
   /*Hero Section*/
+  .hero__body {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   /*bottom list element flex direction*/
   .list__hero-bottom > li {
     flex-direction: row;
@@ -858,6 +1051,70 @@ ul {
   .checkmark {
     width: 6rem;
   }
+  /*pricing cards grid*/
+  .pricing-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*footer*/
+/* Footer */
+.footer {
+  color: #222;
+  padding: var(--outer-padding);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--outer-gap);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--outer-gap);
+  width: 100%;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--min-gap);
+  min-width: 18rem;
+}
+
+.footer-column h6 {
+  font-size: var(--font-size-ui-heading);
+  font-weight: 700;
+  color: #444;
+  margin-bottom: var(--min-gap);
+}
+
+.footer-column a {
+  font-size: var(--font-size-ui-text);
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #00e500;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: var(--outer-gap) 0;
+  width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: var(--font-size-ui-text);
+  color: #999;
 }
 
 @media (min-width: 1024px) {
